@@ -32,12 +32,16 @@
             <table class="table is-striped is-bordered is-hoverable is-fullwidth" v-if="project">
                 <thead>
                 <tr>
-                    <th>Tracks</th>
+                    <th width="50%">Tracks</th>
+                    <th>Start</th>
+                    <th>Duration</th>
                 </tr>
                 </thead>
                 <tbody v-if="project.tracks">
                 <tr v-for="track in project.tracks">
                     <td>{{ track }}</td>
+                    <td><input class="input"></td>
+                    <td><input class="input"></td>
                 </tr>
                 </tbody>
             </table>

@@ -1,5 +1,7 @@
 <template>
     <section class="section">
+        <waveform filePath="/Users/daniel/WebDev/TrackSlicer/test/unit/specs/files/input.wav" :cutpoints="[0.2, 0.3, 0.9]" channel="1"></waveform>
+        <cutpoints :cutpoints="[0.2, 0.3, 0.9]"></cutpoints>
         <div class="container">
             <h1 class="title">
                 Track Slicer
@@ -33,10 +35,12 @@
 
 <script>
   import { remote } from 'electron'
+  import waveform from './widgets/waveform'
+  import cutpoints from './widgets/cutpoints'
 
   export default {
     name: 'main-menu-page',
-    components: {},
+    components: {waveform, cutpoints},
     methods: {
       confirmQuit () {
         remote.dialog.showMessageBox({
